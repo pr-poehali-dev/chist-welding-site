@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -14,11 +14,25 @@ export default function Index() {
     message: ''
   });
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
     setFormData({ name: '', phone: '', email: '', message: '' });
+  };
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -324,16 +338,30 @@ export default function Index() {
       <section className="py-20 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">Наши работы</h2>
-          <p className="text-center text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
             Примеры выполненных проектов — от простых конструкций до сложных металлоизделий
-          </p>
-          <p className="text-center text-white/60 text-sm mb-12">
-            <Icon name="ArrowRight" size={16} className="inline mr-2" />
-            Прокрутите для просмотра
           </p>
         </div>
         <div className="relative">
-          <div className="flex gap-6 overflow-x-auto pb-6 px-6 md:px-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <button
+            onClick={scrollLeft}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-accent hover:bg-accent/80 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
+            aria-label="Прокрутить влево"
+          >
+            <Icon name="ChevronLeft" size={28} className="text-white" />
+          </button>
+          <button
+            onClick={scrollRight}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-accent hover:bg-accent/80 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
+            aria-label="Прокрутить вправо"
+          >
+            <Icon name="ChevronRight" size={28} className="text-white" />
+          </button>
+          <div 
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto pb-6 px-6 md:px-16 snap-x snap-mandatory scrollbar-hide scroll-smooth" 
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
               <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
                 <div className="w-full h-full flex items-center justify-center">
