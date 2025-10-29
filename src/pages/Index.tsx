@@ -52,15 +52,33 @@ export default function Index() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Профессиональные сварочные работы любой сложности
             </h1>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl mb-4 text-white/90">
               Электросварка и газосварка от опытных специалистов. Гарантия качества и соблюдение всех стандартов безопасности.
             </p>
+            <div className="flex flex-wrap gap-4 mb-8 text-sm">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Icon name="Shield" size={16} className="text-accent" />
+                <span>Гарантия до 3 лет</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Icon name="Clock" size={16} className="text-accent" />
+                <span>Выполнение в срок</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+                <Icon name="BadgeCheck" size={16} className="text-accent" />
+                <span>Сертифицированные мастера</span>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
                 <Icon name="MessageSquare" size={20} className="mr-2" />
                 Получить консультацию
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary text-lg px-8 py-6">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-white border-2 border-accent hover:bg-accent hover:text-white text-lg px-8 py-6 shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all hover:scale-105 font-semibold"
+              >
                 <Icon name="Calculator" size={20} className="mr-2" />
                 Рассчитать стоимость
               </Button>
@@ -73,38 +91,38 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">О компании Chist</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Мы специализируемся на предоставлении полного спектра сварочных услуг для частных лиц и бизнеса
+            Молодая динамичная комания профессионалов. Современный подход к сварочным работам
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Award" size={32} className="text-accent" />
+                  <Icon name="Target" size={32} className="text-accent" />
                 </div>
-                <CardTitle>15+ лет опыта</CardTitle>
+                <CardTitle>Фокус на качество</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Наша команда обладает богатым опытом в выполнении сварочных работ различной сложности
+                  Каждый проект выполняем с максимальной точностью и вниманием к деталям
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                   <Icon name="Users" size={32} className="text-accent" />
                 </div>
-                <CardTitle>Сертифицированные специалисты</CardTitle>
+                <CardTitle>Опытные специалисты</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Все наши мастера имеют соответствующие допуски и регулярно проходят повышение квалификации
+                  Мастера с профильным образованием и сертификатами, готовые решать сложные задачи
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                   <Icon name="Wrench" size={32} className="text-accent" />
@@ -113,7 +131,7 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Используем профессиональное оборудование ведущих мировых производителей
+                  Работаем на новейшем профессиональном оборудовании от ведущих производителей
                 </p>
               </CardContent>
             </Card>
@@ -289,13 +307,81 @@ export default function Index() {
                 </div>
 
                 <div className="mt-8 p-6 bg-accent/10 rounded-lg">
-                  <p className="text-sm text-center">
-                    <Icon name="Info" size={18} className="inline mr-2" />
-                    Окончательная стоимость работ определяется после осмотра объекта и согласования технического задания
-                  </p>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Info" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold mb-1">Окончательная стоимость работ определяется после осмотра объекта</p>
+                      <p className="text-xs text-muted-foreground">Выезд специалиста для замера и консультации — бесплатно!</p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-4">Наши работы</h2>
+          <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
+            Примеры выполненных проектов — от простых конструкций до сложных металлоизделий
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №1</p>
+                  <p className="text-xs text-white/40 mt-2">Сварка металлоконструкций</p>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №2</p>
+                  <p className="text-xs text-white/40 mt-2">Изготовление ворот</p>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №3</p>
+                  <p className="text-xs text-white/40 mt-2">Ремонт металлических изделий</p>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №4</p>
+                  <p className="text-xs text-white/40 mt-2">Газовая резка</p>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №5</p>
+                  <p className="text-xs text-white/40 mt-2">Сварка нержавейки</p>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-6">
+                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-sm text-white/60">Место для фото работы №6</p>
+                  <p className="text-xs text-white/40 mt-2">Монтаж конструкций</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -581,9 +667,20 @@ export default function Index() {
                 <Icon name="Flame" size={28} className="text-accent" />
                 <span className="text-xl font-bold">Chist</span>
               </div>
-              <p className="text-white/80 text-sm">
-                Профессиональные сварочные работы любой сложности. Качество и надежность с 2009 года.
+              <p className="text-white/80 text-sm mb-4">
+                Профессиональные сварочные работы любой сложности. Современный подход и качество исполнения.
               </p>
+              <div className="flex gap-3">
+                <div className="w-10 h-10 bg-accent/20 hover:bg-accent rounded-lg flex items-center justify-center cursor-pointer transition-colors">
+                  <Icon name="Phone" size={18} className="text-white" />
+                </div>
+                <div className="w-10 h-10 bg-accent/20 hover:bg-accent rounded-lg flex items-center justify-center cursor-pointer transition-colors">
+                  <Icon name="Mail" size={18} className="text-white" />
+                </div>
+                <div className="w-10 h-10 bg-accent/20 hover:bg-accent rounded-lg flex items-center justify-center cursor-pointer transition-colors">
+                  <Icon name="MessageCircle" size={18} className="text-white" />
+                </div>
+              </div>
             </div>
             <div>
               <h4 className="font-bold mb-4">Услуги</h4>
