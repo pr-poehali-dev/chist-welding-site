@@ -321,69 +321,114 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">Наши работы</h2>
-          <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-white/80 mb-8 max-w-2xl mx-auto">
             Примеры выполненных проектов — от простых конструкций до сложных металлоизделий
           </p>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №1</p>
-                  <p className="text-xs text-white/40 mt-2">Сварка металлоконструкций</p>
+          <p className="text-center text-white/60 text-sm mb-12">
+            <Icon name="ArrowRight" size={16} className="inline mr-2" />
+            Прокрутите для просмотра
+          </p>
+        </div>
+        <div className="relative">
+          <div className="flex gap-6 overflow-x-auto pb-6 px-6 md:px-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №1</p>
+                    <p className="text-sm text-white/50 mt-2">Сварка металлоконструкций</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №2</p>
-                  <p className="text-xs text-white/40 mt-2">Изготовление ворот</p>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №2</p>
+                    <p className="text-sm text-white/50 mt-2">Изготовление ворот</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №3</p>
-                  <p className="text-xs text-white/40 mt-2">Ремонт металлических изделий</p>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №3</p>
+                    <p className="text-sm text-white/50 mt-2">Ремонт металлических изделий</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №4</p>
-                  <p className="text-xs text-white/40 mt-2">Газовая резка</p>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №4</p>
+                    <p className="text-sm text-white/50 mt-2">Газовая резка</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №5</p>
-                  <p className="text-xs text-white/40 mt-2">Сварка нержавейки</p>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №5</p>
+                    <p className="text-sm text-white/50 mt-2">Сварка нержавейки</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-colors group">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6">
-                  <Icon name="Image" size={48} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-sm text-white/60">Место для фото работы №6</p>
-                  <p className="text-xs text-white/40 mt-2">Монтаж конструкций</p>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №6</p>
+                    <p className="text-sm text-white/50 mt-2">Монтаж конструкций</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №7</p>
+                    <p className="text-sm text-white/50 mt-2">Сварка трубопроводов</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 border-accent/30 hover:border-accent transition-all group hover:scale-105">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Icon name="Image" size={56} className="text-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <p className="text-base text-white/70 font-semibold">Место для фото работы №8</p>
+                    <p className="text-sm text-white/50 mt-2">Изготовление лестниц</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <style>{`
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </section>
 
       <section id="advantages" className="py-20">
